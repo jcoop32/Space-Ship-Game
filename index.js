@@ -50,19 +50,6 @@ console.log("You're the best of the best, so you've been");
 console.log("ordered to take out the evil enemy space ships.\n");
 console.log("So, get in your ship and give 'em heck (Hey, we're G-rated)!\n");
 
-// let x = (Math.floor(Math.random() * 4) +3) ; //hull
-// let y = (Math.floor(Math.random() * 3) +2); //firepower
-// let z = (Math.floor(Math.random() * 3) +6)/10;//accuracy
-//initialize alien ship values
-
-// console.log("------------------------");
-// console.log(alienShips);
-// console.log(alienShip);
-// let obj1  = alienShips[alienShip];
-// console.log(obj1.hasOwnProperty('accuracy'));
-
-// console.log("------------------------");
-
 //set up USS Schwarzenegger
 let USSS = {
   hull: 20,
@@ -70,9 +57,6 @@ let USSS = {
   accuracy: 0.7,
 };
 
-//get user name
-//const username = prompt('What is your name? ');
-//console.log(`Your name is ${username}`);
 
 function fightTheShips() {
   while (USSS.hull > 0 && alienShips[alienShip].hull > 0) {
@@ -173,6 +157,7 @@ function alienShipFires() {
     displayStats();
   }
 }
+
 function displayStats() {
   if (alienShips[alienShip].hull < 1) {
     alienShips[alienShip].hull = "Destroyed";
@@ -182,12 +167,6 @@ function displayStats() {
   console.log(`USSS health: ${USSS.hull}`);
   console.log("------------------------\n");
 }
-
-//alienShips.forEach(fightTheShips);
-// console.log("------------------------");
-// console.log(alienShips)
-// console.log(USSS)
-// console.log("------------------------");
 
 for (let ships of alienShips) {
   console.log(
